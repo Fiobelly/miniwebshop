@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background: linear-gradient(90deg, brown, rgb(172, 58, 58));
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: navAnim 1s ease;
+}
+
+@keyframes navAnim {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav h1 {
+    font-size: 30px;
+}
+
+#kategoriak {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.kategoriagomb {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: brown;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.kategoriagomb:hover {
+    transform: scale(1.1);
+    background: gold;
+}
+
+input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 220px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    transform: scale(1.05);
+}
+
+.hero {
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: heroAnim 1.5s ease;
+}
+
+@keyframes heroAnim {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero h2 {
+    font-size: 50px;
+    text-shadow: 2px 2px 5px black;
+}
+
+main {
+    flex: 1;
+    display: flex;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 30px;
+    width: 75%;
+}
+
+.card {
+    width: 280px;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+    overflow: hidden;
+    animation: kartyaAnim 0.8s ease;
+}
+
+@keyframes kartyaAnim {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card p {
+    margin-top: 10px;
+    font-weight: bold;
+    min-height: 60px;
+}
+
+.card h3 {
+    color: brown;
+    margin: 10px 0;
+}
+
+.card button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background: brown;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: rgb(173, 57, 57);
+    transform: scale(1.1);
+}
+
+#kosar {
+    width: 25%;
+    background: white;
+    padding: 20px;
+    border-left: 2px solid #ddd;
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+}
+
+#kosar h2 {
+    margin-bottom: 20px;
+    color: brown;
+}
+
+.kosartermek {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+@media(max-width:1000px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    #container {
+        width: 100%;
+    }
+
+    #kosar {
+        width: 100%;
+        position: static;
+    }
+}
+
+.kosartermek button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 15px;
+    background: crimson;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.kosartermek button:hover {
+    background: darkred;
+    transform: scale(1.08);
+}
